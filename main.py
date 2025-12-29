@@ -23,3 +23,12 @@ class SavingsAccount(Account):
         interest = self.balance * self.interest_rate
         self.balance += interest
         print(f"ไดรับดอกเบี้ย {interest} บาท")
+
+class LoanAccount:
+    def __init__(self, owner_name, loan_amount):
+        self.owner_name = owner_name
+        self.balance = loan_amount
+
+    def pay_installment(self, amount):
+        self.balance -= amount
+        print(f"ชำระเงิน {amount} บาท สำเร็จ")
